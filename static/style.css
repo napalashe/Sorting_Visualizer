@@ -1,0 +1,103 @@
+body {
+  font-family: "Montserrat", sans-serif;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100vh;
+  margin: 0;
+  background-color: #f4f4f9;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.welcome-text {
+  font-size: 48px;
+  color: #333;
+  font-weight: 600;
+  margin: 0;
+}
+
+.title {
+  font-size: 36px;
+  color: #666;
+  font-weight: 400;
+  margin: 0;
+  margin-top: 10px;
+}
+
+#container {
+  height: 200px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  background-color: #ffffff;
+  border: 2px solid #e4e4e7;
+  border-radius: 8px;
+  padding: 10px;
+  width: 80%;
+  margin: 20px 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.bar {
+  width: 15px;
+  background: #4a90e2;
+  margin: 1px;
+  transition: height 0.2s ease;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: 600;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  margin: 5px;
+}
+.nav-button {
+  background-color: #f0f0f5;
+  color: #4a90e2;
+}
+.nav-button:hover {
+  background-color: #4a90e2;
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+.action-button {
+  background-color: #4a90e2;
+  color: #ffffff;
+}
+.action-button:hover {
+  background-color: #357ab7;
+  transform: translateY(-2px);
+}
+#controls {
+  text-align: center;
+  margin-top: 20px;
+}
+.learn-button {
+  position: fixed; /* Fixed position to make it stick to the corner */
+  top: 20px; /* Distance from the top */
+  right: 20px; /* Distance from the right */
+  padding: 10px 20px;
+  background-color: #4a90e2;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none; /* Remove underline from the link */
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.learn-button:hover {
+  background-color: #357ab7;
+  transform: translateY(-2px);
+}

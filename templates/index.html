@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+<!-- fdsafsaf -->
+{% block content %}
+<div class="header">
+  <h1 class="welcome-text">Welcome</h1>
+  <h2 class="title">Sorting Visualizer</h2>
+</div>
+<div id="container"></div>
+
+<hr />
+<div id="controls">
+  <div id="algorithm-selector">
+    <button class="nav-button" onclick="prevAlgorithm()">⬅️ Previous</button>
+    <span id="algorithm-name">Bubble Sort</span>
+    <button class="nav-button" onclick="nextAlgorithm()">Next ➡️</button>
+  </div>
+
+  <div>
+    <button class="action-button" onclick="init()">Reset</button>
+    <button class="action-button" onclick="play()">Play</button>
+    <button class="action-button" onclick="stop()">Stop</button>
+  </div>
+</div>
+<!--learn button-->
+<a href="{{ url_for('learn') }}" class="learn-button">Learn</a>
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+{% endblock %}
