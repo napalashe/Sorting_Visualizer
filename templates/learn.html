@@ -1,6 +1,44 @@
-{%extends "base.html" %}
-<!--fdsafs-->
-{% block content%}
-<h1>Does this work</h1>
-<p>lets see</p>
-{%endblock%}
+{% extends "base.html" %} {% block title %} Learning the Steps {% endblock %} {%
+block content %}
+
+<a href="{{ url_for('index') }}" class="back-to-home">⬅️ Back to Home</a>
+
+<div class="learn-header">
+  <h1>Learn More About Sorting Algorithms</h1>
+  <p>
+    This page provides detailed explanations and code examples for various
+    sorting algorithms.
+  </p>
+</div>
+
+<hr />
+
+<div id="algorithm-details" class="center-box">
+  <h2>Sorting Algorithm: <span id="algorithm-name">Bubble Sort</span></h2>
+  <p id="algorithm-description">
+    Here is the description of the Bubble Sort algorithm...
+  </p>
+
+  <h3>Algorithm Code:</h3>
+  <div class="code-box">
+    <pre><code id="algorithm-code">
+# Example of Bubble Sort in Python
+def bubble_sort(arr):
+    n = len(arr)
+    for i in range(n):
+        for j in range(0, n-i-1):
+            if arr[j] > arr[j+1]:
+                arr[j], arr[j+1] = arr[j+1], arr[j]
+    return arr
+    </code></pre>
+    <button class="copy-button" onclick="copyCode()">Copy Code</button>
+  </div>
+</div>
+
+<div id="algorithm-controls">
+  <button class="nav-button" onclick="prevAlgorithm()">⬅️ Previous</button>
+  <button class="nav-button" onclick="nextAlgorithm()">Next ➡️</button>
+</div>
+
+<script src="{{ url_for('static', filename='learn.js') }}"></script>
+{% endblock %}

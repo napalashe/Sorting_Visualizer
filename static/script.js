@@ -32,6 +32,7 @@ function init() {
 function reset() {
   clearTimeout(animationTimeout);
   isPlaying = false;
+  stop();
   showBars();
   init();
 }

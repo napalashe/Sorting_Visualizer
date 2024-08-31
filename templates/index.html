@@ -1,27 +1,36 @@
-{% extends "base.html" %}
-<!-- fdsafsaf -->
-{% block content %}
-<div class="header">
-  <h1 class="welcome-text">Welcome</h1>
-  <h2 class="title">Sorting Visualizer</h2>
-</div>
-<div id="container"></div>
+{% extends "base.html" %} {% block content %}
+<div class="container">
+  <!-- Learn Button in the Top Left -->
+  <a href="{{ url_for('learn') }}" class="learn-button">Learn</a>
 
-<hr />
-<div id="controls">
+  <div class="header">
+    <h1 class="welcome-text">Welcome</h1>
+    <h2 class="title">Sorting Visualizer</h2>
+  </div>
+
+  <div id="container">
+    <!-- Visualization bars will appear here -->
+  </div>
+
+  <hr />
+
   <div id="algorithm-selector">
-    <button class="nav-button" onclick="prevAlgorithm()">⬅️ Previous</button>
-    <span id="algorithm-name">Bubble Sort</span>
-    <button class="nav-button" onclick="nextAlgorithm()">Next ➡️</button>
+    <button class="btn nav-button mr-3" onclick="prevAlgorithm()">
+      ⟸ Back
+    </button>
+    <span id="algorithm-name" class="h5">Bubble Sort</span>
+    <!-- Updated here -->
+    <button class="btn nav-button ml-3" onclick="nextAlgorithm()">
+      Next ⟹
+    </button>
   </div>
 
-  <div>
-    <button class="action-button" onclick="init()">Reset</button>
-    <button class="action-button" onclick="play()">Play</button>
-    <button class="action-button" onclick="stop()">Stop</button>
+  <div id="controls">
+    <button class="btn action-button reset mr-2" onclick="init()">Reset</button>
+    <button class="btn action-button play mr-2" onclick="play()">Play</button>
+    <button class="btn action-button stop" onclick="stop()">Stop</button>
   </div>
 </div>
-<!--learn button-->
-<a href="{{ url_for('learn') }}" class="learn-button">Learn</a>
+
 <script src="{{ url_for('static', filename='script.js') }}"></script>
 {% endblock %}
